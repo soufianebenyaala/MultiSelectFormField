@@ -27,7 +27,7 @@ class MultiSelectDialogContentState extends State<MultiSelectDialogContent> {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      title: Text('Select Options'),
+      title: const Text('Select Options'),
       content: SingleChildScrollView(
         child: ListBody(
           children: widget.items.map((item) {
@@ -47,13 +47,13 @@ class MultiSelectDialogContentState extends State<MultiSelectDialogContent> {
       ),
       actions: <Widget>[
         TextButton(
-          child: Text('Cancel'),
+          child: const Text('Cancel'),
           onPressed: () {
             Navigator.pop(context);
           },
         ),
         TextButton(
-          child: Text('OK'),
+          child: const Text('OK'),
           onPressed: () {
             Navigator.pop(context, tempSelectedItems);
           },
